@@ -1,0 +1,44 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+### Set Card To Person request with json body
+POST http://doors.irhliving.com:8098/api/card/set?access_token=89CD3A716D1E1C23D2C7423937873AF52BFA2267DF4177919DA30BED333C643C
+Content-Type: application/json
+
+{
+  "cardNo": "1",
+  "cardType":"0",
+  "pin": "1762"
+}
+
+### Get Card List By Pin
+GET http://doors.irhliving.com:8098/api/card/getCards/1715?access_token=89CD3A716D1E1C23D2C7423937873AF52BFA2267DF4177919DA30BED333C643C
+Accept: application/json
+
+### Create Or Update Person
+POST http://doors.irhliving.com:8098/api/person/add?access_token=89CD3A716D1E1C23D2C7423937873AF52BFA2267DF4177919DA30BED333C643C
+Content-Type: application/json
+
+{
+  "cardNo": "4199889",
+  "pin": "559"
+}
+
+### Get Person
+GET http://doors.irhliving.com:8098/api/person/get/6130?access_token=02CDB93A129497C2010CB7BA7156576F0B5A896079A98EFA86FC04EC6D59682F
+Accept: application/json
+
+###  register it to your gateway account using an API key
+POST https://secure.networkmerchants.com/api/v2/devices/register
+Content-Type: application/json
+Authorization: Bearer 2XBhMQMH2VNq3JxA9F7923N5zaEMB6w8
+
+{
+  "registrationCode": "RWANKZ",
+  "deviceNickname": "SDC_1"
+}
+
